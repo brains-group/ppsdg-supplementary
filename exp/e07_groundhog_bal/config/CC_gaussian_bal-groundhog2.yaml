@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow10-out-14e5bb25/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow11-out-7b31258c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow12-out-4a520d2c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow13-out-86a4d3d3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow14-out-b01e877c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow15-out-fbe8fedc/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow16-out-0061dfbf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow17-out-3074c8c8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow18-out-10fb84c9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow19-out-9eaf7d2f/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow10-in-844e694d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow11-in-e2e94ab8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow12-in-cbd4490d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow13-in-0edd97ad/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow14-in-74f77ee2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow15-in-8b089162/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow16-in-f44591ed/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow17-in-cfab13e6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow18-in-92ba3802/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow19-in-f917733c/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow0-out-58e54e98/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_gaussian_bal-shadow0-in-0a5a3b5d/default-44136fa3.csv

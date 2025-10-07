@@ -1,0 +1,4 @@
+dataset: config/dataset/tabarena-taiwanese_bankruptcy_prediction.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/TB_tvae-6564200c/default-44136fa3.csv
+metrics:
+  - o1_estimate

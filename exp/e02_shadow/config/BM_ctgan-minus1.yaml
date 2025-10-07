@@ -1,0 +1,3 @@
+synthesizer: ctgan
+dataset: config/dataset/tabarena-bank-marketing.yaml
+num_canaries: 1

@@ -1,0 +1,3 @@
+synthesizer: tvae
+dataset: config/dataset/tabarena-credit-g.yaml
+num_canaries: 1

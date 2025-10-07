@@ -1,0 +1,8 @@
+synthesizer: gaussian
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+canary_index: 100
+include_canary: false
+reference_size: 5000
+reference_seed: 2
+sample_size: 2000
+sample_seed: 23

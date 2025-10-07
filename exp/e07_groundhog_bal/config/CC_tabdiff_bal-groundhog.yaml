@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow10-out-7d6c9178/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow11-out-7b252e28/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow12-out-402864d4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow13-out-832523b9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow14-out-89db674a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow15-out-b3be0955/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow16-out-37c35e5e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow17-out-47a21a62/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow18-out-0d09cc3b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow19-out-0126a7c1/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow10-in-4beb63ff/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow11-in-6c1d33af/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow12-in-7d272f45/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow13-in-df3993f2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow14-in-2131db2d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow15-in-ceb05dfc/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow16-in-66d0d2b5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow17-in-26a43607/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow18-in-5543b0dd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow19-in-86b0f4f2/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow0-out-7434b93d/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_tabdiff_bal-shadow0-in-648fdc95/default-44136fa3.csv

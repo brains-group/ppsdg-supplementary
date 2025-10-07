@@ -1,0 +1,13 @@
+synthesizer: dp_tvae
+synthesizer_params:
+  epsilon: 0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+downsample_balanced: true
+canary_index: 100
+include_canary: true
+reference_size: 10026
+reference_seed: 2
+sample_size: 4010
+sample_seed: 29

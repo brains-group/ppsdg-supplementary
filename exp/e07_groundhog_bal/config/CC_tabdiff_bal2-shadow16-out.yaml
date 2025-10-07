@@ -1,0 +1,11 @@
+synthesizer: tabdiff
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+train_params:
+  steps: 300
+downsample_balanced: true
+canary_index: 101
+include_canary: false
+reference_size: 6636
+reference_seed: 22
+sample_size: 2654
+sample_seed: 46

@@ -1,0 +1,24 @@
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow10-out-04e5c600/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow11-out-68630602/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow12-out-34651b85/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow13-out-897eb9fa/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow14-out-7a86fced/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow15-out-5cb5bfc3/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow16-out-0e8dc03a/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow17-out-1818e20d/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow18-out-4ab0121f/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow19-out-c2f1e378/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow10-in-93494254/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow11-in-30ddd78a/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow12-in-8ea60e84/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow13-in-a88da591/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow14-in-aebaf1ed/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow15-in-e292d07a/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow16-in-b7aea773/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow17-in-910617a9/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow18-in-02dddd85/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow19-in-13999047/model.joblib
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow0-out-d4443186/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/BM_dp0.1_tvae-shadow0-in-0ac65102/model.joblib

@@ -1,0 +1,4 @@
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/CC_tvae-09eafab4/default-44136fa3.csv
+metrics:
+  - o1_estimate

@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-bank-marketing.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow10-out-68c724e8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow11-out-7f2cec7f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow12-out-41dd6346/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow13-out-065b0db2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow14-out-98f6760f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow15-out-e7f38b84/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow16-out-8114df16/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow17-out-43316df7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow18-out-6eac6f02/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow19-out-a2f172ed/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow10-in-1081e4b4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow11-in-74be3718/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow12-in-5a601866/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow13-in-3b3244a2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow14-in-202fd59d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow15-in-c39d8276/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow16-in-c20904dd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow17-in-75851f56/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow18-in-e54e751d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow19-in-4c86297a/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow0-out-a3a7eda7/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_ctgan_wgan_bal-shadow0-in-d8c7200b/default-44136fa3.csv

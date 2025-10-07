@@ -1,0 +1,9 @@
+synthesizer: gaussian
+dataset: config/dataset/tabarena-credit-g.yaml
+downsample_balanced: true
+canary_index: 100
+include_canary: true
+reference_size: 300
+reference_seed: 1
+sample_size: 120
+sample_seed: 10

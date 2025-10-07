@@ -1,0 +1,3 @@
+synthesizer: original
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+downsample_balanced: true

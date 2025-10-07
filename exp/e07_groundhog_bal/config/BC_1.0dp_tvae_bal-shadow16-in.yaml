@@ -1,0 +1,13 @@
+synthesizer: dp_tvae
+synthesizer_params:
+  epsilon: 1.0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+downsample_balanced: true
+canary_index: 100
+include_canary: true
+reference_size: 2037
+reference_seed: 2
+sample_size: 814
+sample_seed: 26

@@ -1,0 +1,17 @@
+# rsync-filter.txt
+
+# Exclude rules (leading '-' means exclude)
+- /.git/***
+- /**/__pycache__/
+
+# Include rules (leading '+' means include)
++ /ppsdg/***
++ /scripts/***
++ /tabarena-datasets/***
++ README.md
++ pyproject.toml
+# + /*.txt
+
+
+# Exclude everything else that wasn't explicitly included
+- *

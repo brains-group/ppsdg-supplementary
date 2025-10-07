@@ -1,0 +1,11 @@
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/BM_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/BC_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/CC_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/CR_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/GM_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/HE_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/PB_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/TB_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/GC_tabdiff_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/AP_ctgan_testing.yaml --train-only
+python -m ppsdg.evaluate.train_and_generate exp/e02_synth_training/config/AP_tabdiff_testing.yaml --train-only

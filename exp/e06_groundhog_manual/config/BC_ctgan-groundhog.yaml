@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow10-out-dec0604f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow11-out-912c03a8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow12-out-a7476a84/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow13-out-76dac9b8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow14-out-9dfb5adf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow15-out-d5524f52/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow16-out-0cd24076/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow17-out-b46e187d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow18-out-bf51a8fb/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow19-out-08333fb6/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow10-in-d11aa218/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow11-in-14c6c886/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow12-in-58ae4600/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow13-in-fd1d6ce0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow14-in-61146ceb/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow15-in-7ae42c73/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow16-in-175d9544/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow17-in-73539610/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow18-in-81c74cdd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow19-in-d8c568d9/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow0-out-832e6c20/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow0-in-c1dcb895/default-44136fa3.csv

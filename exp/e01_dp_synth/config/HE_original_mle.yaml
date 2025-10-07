@@ -1,0 +1,9 @@
+dataset: config/dataset/tabarena-heloc.yaml
+model: xgboost
+target_metric: balanced_accuracy
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy

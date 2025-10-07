@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow10-out-80e2d6dc/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow11-out-8fb69874/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow12-out-a76ca3f5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow13-out-021a12a7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow14-out-035648d3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow15-out-6bf04295/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow16-out-a49755f8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow17-out-1a56df4b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow18-out-8d23cb34/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow19-out-aeeb8d3b/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow10-in-ee283277/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow11-in-7bd6948b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow12-in-d6d085f8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow13-in-ad736de6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow14-in-1418db78/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow15-in-754ba2f2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow16-in-6ee604b6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow17-in-878aec23/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow18-in-dd565e47/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow19-in-85eac260/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow0-out-d6ba3e92/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CC_0dp_ctgan_wgan-shadow0-in-6c47c9ff/default-44136fa3.csv

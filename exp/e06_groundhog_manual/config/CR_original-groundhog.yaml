@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit-g.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow10-out-ebb4ccc9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow11-out-521eb792/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow12-out-e7889b20/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow13-out-edb13a83/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow14-out-53e7d4e2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow15-out-b1fc9252/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow16-out-c7e3ceaa/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow17-out-9b10281e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow18-out-06e00dbf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow19-out-08c62294/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow10-in-733295b1/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow11-in-f0ed9ee7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow12-in-674ff386/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow13-in-46867d80/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow14-in-3bada30d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow15-in-392ec699/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow16-in-e5dc5e21/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow17-in-c7f2e539/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow18-in-a911b6dd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow19-in-4a78fca7/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow0-out-15a75488/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_original-shadow0-in-ac1478a0/default-44136fa3.csv

@@ -1,0 +1,7 @@
+synthesizer: tvae
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+canary_index: 100
+include_canary: true
+reference_size: 5000
+sample_size: 1000
+sample_seed: 17

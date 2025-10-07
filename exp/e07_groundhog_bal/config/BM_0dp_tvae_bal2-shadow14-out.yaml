@@ -1,0 +1,13 @@
+synthesizer: dp_tvae
+synthesizer_params:
+  epsilon: 0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+dataset: config/dataset/tabarena-bank-marketing.yaml
+downsample_balanced: true
+canary_index: 101
+include_canary: false
+reference_size: 5289
+reference_seed: 22
+sample_size: 2115
+sample_seed: 44

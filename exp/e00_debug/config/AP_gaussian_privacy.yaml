@@ -1,0 +1,5 @@
+dataset: config/dataset/tabarena-kddcup09_appetency.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/AP_gaussian-cdd0cbba/default-44136fa3.csv
+metrics:
+- dcr_baseline
+- dcr_overfit

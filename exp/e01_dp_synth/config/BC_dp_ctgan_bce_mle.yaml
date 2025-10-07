@@ -1,0 +1,10 @@
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+model: xgboost
+target_metric: balanced_accuracy
+train_override_df: /home/shared/ppsdg-data/train_and_gen/BC_dp_ctgan_bce-b1326ad9/default-44136fa3.csv
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy

@@ -1,0 +1,24 @@
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow10-out-832ebe51/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow11-out-8cd7729d/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow12-out-1ebd00f4/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow13-out-382d469d/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow14-out-ae062bce/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow15-out-5ca2b162/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow16-out-6ce16af6/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow17-out-f8489525/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow18-out-029fdc13/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow19-out-3355c8dc/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow10-in-1085bace/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow11-in-fab3a87d/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow12-in-08e35fca/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow13-in-43c95e5a/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow14-in-cd75638c/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow15-in-8d8d938a/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow16-in-9db78643/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow17-in-d2734bd5/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow18-in-2757c422/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow19-in-c54c591b/model.joblib
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow0-out-dde42a76/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow0-in-f9deb55c/model.joblib

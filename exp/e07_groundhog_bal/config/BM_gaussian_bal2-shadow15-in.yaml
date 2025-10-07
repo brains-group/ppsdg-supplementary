@@ -1,0 +1,9 @@
+synthesizer: gaussian
+dataset: config/dataset/tabarena-bank-marketing.yaml
+downsample_balanced: true
+canary_index: 101
+include_canary: true
+reference_size: 5289
+reference_seed: 22
+sample_size: 2115
+sample_seed: 45

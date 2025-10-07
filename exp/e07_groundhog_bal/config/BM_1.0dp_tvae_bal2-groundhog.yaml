@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-bank-marketing.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow10-out-13e05d99/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow11-out-7a62308e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow12-out-a366883a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow13-out-08c56b33/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow14-out-0f4d0938/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow15-out-26a6885f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow16-out-052ddac0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow17-out-ee94671e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow18-out-4f5b6954/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow19-out-80ae41ce/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow10-in-99d3cb57/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow11-in-fb366e26/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow12-in-66d25326/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow13-in-ee589cf9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow14-in-f083d1a6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow15-in-cb062242/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow16-in-386f3012/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow17-in-8c44f67d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow18-in-e7eb3315/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow19-in-94a5536f/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow0-out-43da6612/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_1.0dp_tvae_bal2-shadow0-in-e164a7f1/default-44136fa3.csv

@@ -1,0 +1,3 @@
+synthesizer: original
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+downsample_balanced: true

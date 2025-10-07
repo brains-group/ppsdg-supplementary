@@ -1,0 +1,9 @@
+synthesizer: tvae
+dataset: config/dataset/tabarena-credit-g.yaml
+downsample_balanced: true
+canary_index: 101
+include_canary: false
+reference_size: 300
+reference_seed: 21
+sample_size: 120
+sample_seed: 30

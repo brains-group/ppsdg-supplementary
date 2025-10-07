@@ -1,0 +1,24 @@
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow10-out-d048e101/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow11-out-e79ac972/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow12-out-387c42a2/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow13-out-29c1a780/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow14-out-5750d906/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow15-out-06e604ba/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow16-out-68562ec1/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow17-out-d2fa3ed2/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow18-out-8cdf2879/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow19-out-953ca373/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow10-in-9cc9b240/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow11-in-d65ce3fe/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow12-in-6880208f/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow13-in-21f23db6/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow14-in-a0ed7bf0/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow15-in-2e93d64c/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow16-in-09e012e5/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow17-in-187fc4f9/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow18-in-614e1a08/model.joblib
+  - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow19-in-44d5ae19/model.joblib
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow0-out-4592b17a/model.joblib
+- - /home/shared/ppsdg-data/train_and_gen/BC_ctgan-shadow0-in-30026eec/model.joblib

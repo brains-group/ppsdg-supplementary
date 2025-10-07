@@ -1,0 +1,5 @@
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/CC_dp_ctgan_wgan-14591231/default-44136fa3.csv
+metrics:
+- dcr_baseline
+- dcr_overfit

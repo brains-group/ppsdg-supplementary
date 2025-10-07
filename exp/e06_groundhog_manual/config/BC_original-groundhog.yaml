@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow10-out-8103edb0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow11-out-b36e92e1/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow12-out-57c232ba/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow13-out-24ede47e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow14-out-197a9e29/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow15-out-fec323b7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow16-out-8414fdd8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow17-out-199ee7fd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow18-out-ad770170/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow19-out-fbc41952/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow10-in-0a0f610c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow11-in-ff4d9c4a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow12-in-abebdd18/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow13-in-2f33134c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow14-in-8a5e48f2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow15-in-a6c365e2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow16-in-b94f6260/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow17-in-7bc838e9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow18-in-d74db365/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow19-in-bd21081a/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow0-out-7dd7bdab/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BC_original-shadow0-in-88f62d2c/default-44136fa3.csv

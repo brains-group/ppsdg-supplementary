@@ -1,0 +1,5 @@
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/BC_0dp_ctgan_wgan_bal-bd446b56/default-44136fa3.csv
+metrics:
+- dcr_baseline
+- dcr_overfit

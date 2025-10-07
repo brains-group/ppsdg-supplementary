@@ -1,0 +1,63 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+# this is how we get the git packages to install
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[project]
+name = "ppsdg"
+version = "2025.6.10"
+dependencies = [
+  "category_encoders==2.8.1",
+  "ctgan==0.11.0",
+  "icecream==2.1.5",
+  "kaleido==1.0.0",
+  "lightgbm==4.6.0",
+  "pillow==11.2.1",
+  "prdc==0.2",
+  "python-dotenv==1.1.1",
+  "ray==2.47.1",
+  "scikit-learn==1.7.1",
+  "scipy==1.15.3",
+  "sdmetrics==0.21.0",
+  "sdv==1.22.1",
+  "tabkit@git+https://github.com/inwonakng/tabkit.git@main",
+  "tabulate==0.9.0",
+  "tomli-w==1.2.0",
+  "torch==2.6.0",
+  "wandb==0.20.1",
+  "xgboost==3.0.2",
+  "matplotlib>=3.10.6,<4",
+  "seaborn>=0.13.2,<0.14",
+  "ipython>=8.37.0,<9"
+, "plotly>=6.3.0,<7", "ipdb>=0.13.13,<0.14"]
+requires-python = ">=3.10"
+readme = "README.md"
+
+[project.optional-dependencies]
+dev = ["notebook", "ipykernel", "jupyter", "ipdb==0.13.13"]
+
+[project.scripts]
+train-gen = "ppsdg.evaluate.train_and_generate:main"
+eval-mle = "ppsdg.evaluate.mle:main"
+eval-privacy = "ppsdg.evaluate.privacy:main"
+inspect-dataset = "ppsdg.utils.inspect_dataset:main"
+synth-hpo = "ppsdg.evaluate.synth_hpo:main"
+
+[tool.pixi.workspace]
+channels = ["conda-forge"]
+platforms = ["osx-arm64", "linux-64"]
+
+[tool.pixi.pypi-dependencies]
+PPSDG = { path = ".", editable = true }
+
+[tool.pixi.environments]
+default = { solve-group = "default" }
+dev = { features = ["dev"], solve-group = "default" }
+
+[tool.pixi.tasks]
+
+[tool.pixi.dependencies]
+python = "3.10.18.*"

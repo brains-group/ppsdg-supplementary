@@ -1,0 +1,5 @@
+dataset: config/dataset/tabarena-bank-marketing.yaml
+synthetic_data: /home/shared/ppsdg-data/train_and_gen/BM_0.1dp_tvae-1f9d062f/default-44136fa3.csv
+metrics:
+- dcr_baseline
+- dcr_overfit

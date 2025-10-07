@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow10-out-d561d208/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow11-out-fbbbf10e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow12-out-0e1a18d9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow13-out-f9485143/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow14-out-55a6f9a5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow15-out-9bc1c798/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow16-out-b60525f5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow17-out-5e922336/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow18-out-b6006250/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow19-out-eb8842a3/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow10-in-7df416da/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow11-in-0f8fe69d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow12-in-11735a61/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow13-in-c8636438/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow14-in-45b6989d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow15-in-c609afea/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow16-in-7b545440/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow17-in-f9f62b8a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow18-in-464c9c5b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow19-in-22ab5958/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow0-out-bc69b411/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_original_bal2-shadow0-in-bfecac6f/default-44136fa3.csv

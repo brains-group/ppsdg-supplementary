@@ -1,0 +1,10 @@
+dataset: config/dataset/tabarena-credit-g.yaml
+model: xgboost
+target_metric: balanced_accuracy
+train_override_df: /home/shared/ppsdg-data/train_and_gen/CR_0dp_ctgan_wgan_bal-313b4473/default-44136fa3.csv
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy

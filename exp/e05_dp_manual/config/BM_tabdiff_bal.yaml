@@ -1,0 +1,5 @@
+synthesizer: tabdiff
+dataset: config/dataset/tabarena-bank-marketing.yaml
+downsample_balanced: true
+train_params:
+  steps: 300

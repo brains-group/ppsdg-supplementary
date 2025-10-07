@@ -1,0 +1,7 @@
+synthesizer: tabdiff
+dataset: config/dataset/tabarena-bank-marketing.yaml
+canary_index: 100
+include_canary: true
+reference_size: 10000
+sample_size: 1000
+sample_seed: 11

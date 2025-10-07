@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow10-out-4dd04aef/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow11-out-c78f646c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow12-out-e394862a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow13-out-877d54a2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow14-out-3f66297e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow15-out-61059234/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow16-out-d679b005/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow17-out-8ccfb893/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow18-out-74ce3a83/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow19-out-cfb6f1ac/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow10-in-d651c0cd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow11-in-aec86568/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow12-in-17c076da/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow13-in-3b96860e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow14-in-cfe4727e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow15-in-ecc09278/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow16-in-0b9f321d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow17-in-0bbc81ea/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow18-in-1a798a04/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow19-in-204f8935/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow0-out-c757d7ba/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_gaussian-shadow0-in-8d977068/default-44136fa3.csv

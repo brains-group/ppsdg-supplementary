@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow10-out-6143366a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow11-out-03531e0a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow12-out-7644081c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow13-out-68f16764/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow14-out-a8e09d5c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow15-out-bb0605e8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow16-out-b20c7439/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow17-out-0da6e98a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow18-out-3f7a5e62/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow19-out-d3e4a110/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow10-in-f4b8968c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow11-in-5b88cd06/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow12-in-421af134/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow13-in-f9c04893/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow14-in-915ea90f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow15-in-9cd034ce/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow16-in-b2e9ddb8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow17-in-57e2ecf1/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow18-in-3663dfe2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow19-in-3c96d469/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow0-out-69b5a182/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tvae_bal2-shadow0-in-645ea2a5/default-44136fa3.csv

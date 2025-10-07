@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit-g.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow10-out-ac2c0738/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow11-out-3747822f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow12-out-41f01401/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow13-out-5fd6d9e6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow14-out-5ea4853b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow15-out-56a153b2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow16-out-62e57ad2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow17-out-bbfca1b5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow18-out-096f8b80/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow19-out-4baf01a9/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow10-in-5bb8aff2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow11-in-4ebd55ba/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow12-in-6e8c34d8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow13-in-dc7c008c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow14-in-c9e3059b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow15-in-83532e38/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow16-in-5d4c6626/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow17-in-f4f3094e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow18-in-6e292433/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow19-in-a319af28/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow0-out-495a8587/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_ctgan_bal2-shadow0-in-52852eae/default-44136fa3.csv

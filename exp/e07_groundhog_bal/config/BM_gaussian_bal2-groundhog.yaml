@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-bank-marketing.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow10-out-6efe02d8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow11-out-8c8b6d9c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow12-out-7a71180a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow13-out-b4a2e669/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow14-out-063802fd/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow15-out-bce3fddf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow16-out-de1c9454/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow17-out-88bb796a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow18-out-ff85a5ea/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow19-out-7686738f/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow10-in-8a614941/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow11-in-c0c9847f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow12-in-21e2f714/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow13-in-201f5cd4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow14-in-3aebfb7f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow15-in-177b4d8a/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow16-in-057cca3e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow17-in-c5ff5f7c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow18-in-ff3fa659/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow19-in-a5a2c807/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow0-out-90be2499/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_gaussian_bal2-shadow0-in-9acc214d/default-44136fa3.csv

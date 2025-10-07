@@ -1,0 +1,10 @@
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+model: xgboost
+target_metric: balanced_accuracy
+train_override_df: /home/shared/ppsdg-data/train_and_gen/GM_0dp_ctgan_wgan_bal-0f8e01b8/default-44136fa3.csv
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy

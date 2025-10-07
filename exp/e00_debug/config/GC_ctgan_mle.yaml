@@ -1,0 +1,10 @@
+dataset: config/dataset/tabarena-Is-this-a-good-customer.yaml
+model: xgboost
+target_metric: balanced_accuracy
+train_override_df: /home/shared/ppsdg-data/train_and_gen/GC_ctgan-32c26273/default-44136fa3.csv
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy

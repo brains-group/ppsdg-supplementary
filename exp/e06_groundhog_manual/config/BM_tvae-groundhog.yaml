@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-bank-marketing.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow10-out-8fbfc38f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow11-out-9617ef03/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow12-out-96df23c0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow13-out-2b9d28d4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow14-out-fbcfb3ba/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow15-out-8d82f53b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow16-out-7d118ccb/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow17-out-ca110422/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow18-out-ccfe0e9d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow19-out-142966bd/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow10-in-3abed8c3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow11-in-abcdb849/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow12-in-438c408f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow13-in-3890be8b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow14-in-7471700f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow15-in-0e25ebf8/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow16-in-258674c0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow17-in-23224931/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow18-in-e20c1205/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow19-in-f14302a3/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow0-out-801a9ace/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/BM_tvae-shadow0-in-acbb10e8/default-44136fa3.csv

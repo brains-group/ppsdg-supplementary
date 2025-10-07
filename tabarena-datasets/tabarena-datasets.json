@@ -1,0 +1,257 @@
+[
+  {
+    "name": "blood-transfusion-service-center",
+    "task_type": "classification",
+    "task_id": 363621
+  },
+  {
+    "name": "Amazon_employee_access",
+    "task_type": "classification",
+    "task_id": 363613
+  },
+  {
+    "name": "APSFailure",
+    "task_type": "classification",
+    "task_id": 363616
+  },
+  {
+    "name": "bank-marketing",
+    "task_type": "classification",
+    "task_id": 363618
+  },
+  {
+    "name": "Bioresponse",
+    "task_type": "classification",
+    "task_id": 363620
+  },
+  {
+    "name": "Bank_Customer_Churn",
+    "task_type": "classification",
+    "task_id": 363619
+  },
+  {
+    "name": "anneal",
+    "task_type": "classification",
+    "task_id": 363614
+  },
+  {
+    "name": "airfoil_self_noise",
+    "task_type": "regression",
+    "task_id": 363612
+  },
+  {
+    "name": "Another-Dataset-on-used-Fiat-500",
+    "task_type": "regression",
+    "task_id": 363615
+  },
+  {
+    "name": "credit_card_clients_default",
+    "task_type": "classification",
+    "task_id": 363627
+  },
+  {
+    "name": "customer_satisfaction_in_airline",
+    "task_type": "classification",
+    "task_id": 363628
+  },
+  {
+    "name": "coil2000_insurance_policies",
+    "task_type": "classification",
+    "task_id": 363624
+  },
+  {
+    "name": "diabetes",
+    "task_type": "classification",
+    "task_id": 363629
+  },
+  {
+    "name": "credit-g",
+    "task_type": "classification",
+    "task_id": 363626
+  },
+  {
+    "name": "Diabetes130US",
+    "task_type": "classification",
+    "task_id": 363630
+  },
+  {
+    "name": "churn",
+    "task_type": "classification",
+    "task_id": 363623
+  },
+  {
+    "name": "concrete_compressive_strength",
+    "task_type": "regression",
+    "task_id": 363625
+  },
+  {
+    "name": "diamonds",
+    "task_type": "regression",
+    "task_id": 363631
+  },
+  {
+    "name": "GiveMeSomeCredit",
+    "task_type": "classification",
+    "task_id": 363673
+  },
+  {
+    "name": "hazelnut-spread-contaminant-detection",
+    "task_type": "classification",
+    "task_id": 363674
+  },
+  {
+    "name": "E-CommereShippingData",
+    "task_type": "classification",
+    "task_id": 363632
+  },
+  {
+    "name": "hiva_agnostic",
+    "task_type": "classification",
+    "task_id": 363677
+  },
+  {
+    "name": "heloc",
+    "task_type": "classification",
+    "task_id": 363676
+  },
+  {
+    "name": "Fitness_Club",
+    "task_type": "classification",
+    "task_id": 363671
+  },
+  {
+    "name": "healthcare_insurance_expenses",
+    "task_type": "regression",
+    "task_id": 363675
+  },
+  {
+    "name": "Food_Delivery_Time",
+    "task_type": "regression",
+    "task_id": 363672
+  },
+  {
+    "name": "houses",
+    "task_type": "regression",
+    "task_id": 363678
+  },
+  {
+    "name": "HR_Analytics_Job_Change_of_Data_Scientists",
+    "task_type": "classification",
+    "task_id": 363679
+  },
+  {
+    "name": "in_vehicle_coupon_recommendation",
+    "task_type": "classification",
+    "task_id": 363681
+  },
+  {
+    "name": "Is-this-a-good-customer",
+    "task_type": "classification",
+    "task_id": 363682
+  },
+  {
+    "name": "maternal_health_risk",
+    "task_type": "classification",
+    "task_id": 363685
+  },
+  {
+    "name": "online_shoppers_intention",
+    "task_type": "classification",
+    "task_id": 363691
+  },
+  {
+    "name": "Marketing_Campaign",
+    "task_type": "classification",
+    "task_id": 363684
+  },
+  {
+    "name": "kddcup09_appetency",
+    "task_type": "classification",
+    "task_id": 363683
+  },
+  {
+    "name": "NATICUSdroid",
+    "task_type": "classification",
+    "task_id": 363689
+  },
+  {
+    "name": "miami_housing",
+    "task_type": "regression",
+    "task_id": 363686
+  },
+  {
+    "name": "students_dropout_and_academic_success",
+    "task_type": "classification",
+    "task_id": 363704
+  },
+  {
+    "name": "polish_companies_bankruptcy",
+    "task_type": "classification",
+    "task_id": 363694
+  },
+  {
+    "name": "seismic-bumps",
+    "task_type": "classification",
+    "task_id": 363700
+  },
+  {
+    "name": "qsar-biodeg",
+    "task_type": "classification",
+    "task_id": 363696
+  },
+  {
+    "name": "SDSS17",
+    "task_type": "classification",
+    "task_id": 363699
+  },
+  {
+    "name": "splice",
+    "task_type": "classification",
+    "task_id": 363702
+  },
+  {
+    "name": "physiochemical_protein",
+    "task_type": "regression",
+    "task_id": 363693
+  },
+  {
+    "name": "QSAR-TID-11",
+    "task_type": "regression",
+    "task_id": 363697
+  },
+  {
+    "name": "QSAR_fish_toxicity",
+    "task_type": "regression",
+    "task_id": 363698
+  },
+  {
+    "name": "superconductivity",
+    "task_type": "regression",
+    "task_id": 363705
+  },
+  {
+    "name": "taiwanese_bankruptcy_prediction",
+    "task_type": "classification",
+    "task_id": 363706
+  },
+  {
+    "name": "website_phishing",
+    "task_type": "classification",
+    "task_id": 363707
+  },
+  {
+    "name": "wine_quality",
+    "task_type": "regression",
+    "task_id": 363708
+  },
+  {
+    "name": "MIC",
+    "task_type": "classification",
+    "task_id": 363711
+  },
+  {
+    "name": "jm1",
+    "task_type": "classification",
+    "task_id": 363712
+  }
+]
