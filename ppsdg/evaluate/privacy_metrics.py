@@ -39,7 +39,7 @@ def dcr_overfit(
     for fold in tqdm(range(slice_span)):
         res = DCROverfittingProtection.compute_breakdown(
             real_training_data=real_df[fold::slice_span],
-            synthetic_data=syn_df[fold::slice_span],
+            synthetic_data=syn_df,
             real_validation_data=val_df,
             metadata=metadata,
         )

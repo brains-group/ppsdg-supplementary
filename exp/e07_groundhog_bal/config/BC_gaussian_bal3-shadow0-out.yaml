@@ -1,0 +1,9 @@
+synthesizer: gaussian
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+downsample_balanced: true
+canary_index: 102
+include_canary: false
+reference_size: 2037
+reference_seed: 11
+sample_size: 814
+sample_seed: 20

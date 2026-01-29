@@ -51,6 +51,7 @@ for dname, dset in datasets.items():
         dataset=dset,
         model=mle_target,
         target_metric=mle_metric,
+        metrics=['balanced_accuracy', 'accuracy', 'f1'],
     )
     original_mle_config_path = exp_dir / f"config/{config_name}.yaml"
     original_mle_config.save_yaml(original_mle_config_path)
@@ -108,6 +109,7 @@ for dname, dset in datasets.items():
             dataset=dset,
             model=mle_target,
             target_metric=mle_metric,
+            metrics=['balanced_accuracy', 'accuracy', 'f1'],
             train_override_df=str(data_save_path),
         )
         mle_config_path = exp_dir / f"config/{config_name}.yaml"

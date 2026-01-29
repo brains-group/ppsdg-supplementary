@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-credit-g.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow10-out-91f82f15/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow11-out-4fad0847/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow12-out-fe32c1f3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow13-out-a5b91fdf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow14-out-06e1a5d7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow15-out-271eff32/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow16-out-0a67a9df/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow17-out-3070e960/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow18-out-13f08f7e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow19-out-8f47be6e/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow10-in-e114ffbc/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow11-in-607177f0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow12-in-73ef5631/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow13-in-98435092/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow14-in-01585731/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow15-in-5555c7ef/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow16-in-29180778/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow17-in-e253c2de/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow18-in-48f3b8b0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow19-in-74b8000b/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow0-out-b89fe01b/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/CR_1.0dp_tvae_bal3-shadow0-in-6c653474/default-44136fa3.csv

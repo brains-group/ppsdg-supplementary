@@ -85,12 +85,21 @@ def get_dataset_info(proc: TableProcessor):
     return info
 
 
-def prepare_data(proc: TableProcessor, data_dir: str):
+def prepare_data(
+    proc: TableProcessor,
+    data_dir: str,
+    split_override: dict[list[pd.DataFrame]] = {}
+):
     cat_cols = [i + 1 for i, col in enumerate(proc.columns_info) if not col.is_cont]
     num_cols = [i + 1 for i, col in enumerate(proc.columns_info) if col.is_cont]
     label_col = proc.label_info.name
     for sp in ["train", "test", "val"]:
-        X, y = proc.get_split(f"{sp}")
+        print(split_override, sp)
+        if sp in split_override:
+            print("using override")
+            X, y = split_override[sp]
+        else:
+            X, y = proc.get_split(f"{sp}")
         df = pd.concat([y.to_frame(), X], axis=1)
         df.columns = list(range(len(proc.columns_info) + 1))
         for i in cat_cols:
@@ -118,6 +127,7 @@ def prepare_data(proc: TableProcessor, data_dir: str):
 def get_tabdiff_config(
     proc: TableProcessor,
     train_params: dict | None = None,
+    split_override: dict[list[pd.DataFrame]] = {},
 ) -> TabDiffConfig:
     # TODO: make the info dict from the proc
     df = proc.get("raw_df")
@@ -150,7 +160,7 @@ def get_tabdiff_config(
     data_dir = TABDIFF_CACHE_DIR / "data" / dataset_name
     data_dir.mkdir(exist_ok=True, parents=True)
 
-    prepare_data(proc, data_dir)
+    prepare_data(proc, data_dir, split_override)
     with open(data_dir / "info.json", "w") as f:
         json.dump(dataset_info, f, indent=2)
 
@@ -181,11 +191,12 @@ def train_tabdiff(
     proc: TableProcessor,
     train_params: dict | None = None,
     cache_path: Path | None = None,  # SynthesizerConfig-compatible cache path
+    split_override: dict[list[pd.DataFrame]] = {},
 ) -> TabDiffConfig:
-    config = get_tabdiff_config(proc, train_params)
+    config = get_tabdiff_config(proc, train_params, split_override)
     # need to prep the cache directory ahead of time
     trainer = build_trainer(config)
-    # NOTE: this is how we will interact with the tabdiff
+    # NOTE: inwon -- this is how we will interact with the tabdiff
     # since the DP version will have some more tunable knobs (eps, delta), the
     # `train_params` dictionary should contain that type of information.
     # We also need to have a way to track the hyperparams we set for these.

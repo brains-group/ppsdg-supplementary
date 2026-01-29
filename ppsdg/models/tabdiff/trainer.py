@@ -69,6 +69,7 @@ class Trainer:
         self.test_dataset = test_dataset
         self.steps = steps
         self.init_lr = lr
+        # NOTE: inwon -- same deal, should we move to SGD?
         self.optimizer = torch.optim.AdamW(
             self.diffusion.parameters(), lr=lr, weight_decay=weight_decay
         )
@@ -119,6 +120,7 @@ class Trainer:
         for param_group in self.optimizer.param_groups:
             param_group["lr"] = lr
 
+    # NOTE: inwon -- this does the actual step.
     def _run_step(self, x, closs_weight, dloss_weight):
         x = x.to(self.device)
 
@@ -126,10 +128,12 @@ class Trainer:
 
         self.optimizer.zero_grad()
 
+        # NOTE: inwon -- this needs some thinking about.
         dloss, closs = self.diffusion.mixed_loss(x)
 
         loss = dloss_weight * dloss + closs_weight * closs
         loss.backward()
+        # NOTE: inwon -- after the backward call, we now have gradients. 
         # noisy stuff here?
 
 
@@ -156,6 +160,7 @@ class Trainer:
         gloss = np.around(curr_closs / curr_count, 4)
         return mloss, gloss
 
+    # NOTE: inwon -- I added these. Nice utility functions that will allow us
     # to get per-sample gradients after batched computation (no more loops!)
     def _capture_activation(self, key):
         def hook(module, input, output):
@@ -176,6 +181,7 @@ class Trainer:
         self._grad_outputs.clear()
 
 
+    # NOTE: inwon -- this is the entry point for training
     def run_loop(self):
         patience = 0
         closs_weight, dloss_weight = self.c_lambda, self.d_lambda
@@ -314,6 +320,9 @@ class Trainer:
                     f"LR scheduler with name '{self.lr_scheduler}' is not implemented"
                 )
 
+            # NOTE: inwon -- it looks like `self.ema_model` is what's used as our final product.
+            # So there is an underlying "diffusion" model that has everything, but we are keeping copies 
+            # of the different submodules of it, and updating the copies using EMA (exponential moving average) at each step.
 
             # Update EMA models.
             update_ema(
@@ -332,6 +341,7 @@ class Trainer:
                 rate=self.ema_decay,
             )
 
+            # NOTE: inwon -- interesting stuff ends here. Rest is reporting.
 
             # Save ckpt base on the best training loss
             if total_loss < best_loss:

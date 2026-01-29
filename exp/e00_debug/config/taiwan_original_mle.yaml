@@ -1,0 +1,3 @@
+dataset: config/dataset/tabarena-taiwanese_bankruptcy_prediction.yaml
+model: xgboost
+target_metric: balanced_accuracy

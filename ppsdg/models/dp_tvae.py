@@ -104,6 +104,7 @@ class DPTVAE(TVAE):
         encoder = Encoder(data_dim, self.compress_dims, self.embedding_dim).to(self._device)
         decoder = Decoder(self.embedding_dim, self.decompress_dims, data_dim).to(self._device)
 
+        # NOTE: inwon -- is Adam OK? Need to think about this...
         optimizer = Adam(
             list(encoder.parameters()) + list(decoder.parameters()),
             weight_decay=self.l2scale

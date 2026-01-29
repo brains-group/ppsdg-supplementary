@@ -112,6 +112,7 @@ class UnifiedCtimeDiffusion(torch.nn.Module):
                 f"The noise schedule--{self.cat_scheduler}-- is not implemented for discrete data at CTIME "
             )
 
+    # NOTE: inwon -- this is the key part. We need to make sure this loss will be compatible with DP
     def mixed_loss(self, x):
         b = x.shape[0]
         device = x.device
@@ -149,6 +150,7 @@ class UnifiedCtimeDiffusion(torch.nn.Module):
             x_num_t = x_num + noise * sigma_num
 
         # Discrete forward diff
+        # NOTE: inwon -- the "move chance" here is how they do noise for discrete features. i.e. "the chance to move to the mask class"
         x_cat_t = x_cat
         x_cat_t_soft = x_cat  # in the case where x_cat is empty, x_cat_t_soft will have the same shape as x_cat
         if x_cat.shape[1] > 0:

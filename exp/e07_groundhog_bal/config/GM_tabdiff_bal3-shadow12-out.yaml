@@ -1,0 +1,11 @@
+synthesizer: tabdiff
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+train_params:
+  steps: 300
+downsample_balanced: true
+canary_index: 102
+include_canary: false
+reference_size: 10026
+reference_seed: 12
+sample_size: 4010
+sample_seed: 32

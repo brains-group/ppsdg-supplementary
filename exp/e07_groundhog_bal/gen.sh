@@ -1,7 +1,7 @@
 for d in BC:4074 BM:10578 CC:13272 CR:600 GM:20052; do
 	n=${d#*:}
 	for file in ${d%:*}_*; do
-		gile=${file/_bal/_bal3}
+		gile=${file/_bal/_bal}
 		for j in 0 {10..19}; do
 			for io in in:true out:false; do
 				shf=config/${gile%.yaml}-shadow$j-${io%:*}.yaml

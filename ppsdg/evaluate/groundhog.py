@@ -52,6 +52,14 @@ class GroundhogAuditConfig (Configuration):
                 for j in range(len(paths)):
                     paths[j] = str(Path(paths[j]).resolve())
 
+                    # Early exit
+                    try:
+                        with open(paths[j], "rb") as _:
+                            pass
+                    except FileNotFoundError:
+                        import sys
+                        sys.exit(1)
+
     @property
     def save_dir(self) -> Path:
         return DATA_DIR / "privacy" / self.get_unique_name()

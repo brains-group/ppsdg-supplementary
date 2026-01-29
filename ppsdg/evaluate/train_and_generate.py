@@ -8,6 +8,7 @@ from typing import Literal
 import joblib
 import numpy as np
 import pandas as pd
+import torch
 from sdv.single_table import (
     CTGANSynthesizer,
     GaussianCopulaSynthesizer,
@@ -20,10 +21,12 @@ from tabkit.utils import Configuration
 
 from ..models.dp_ctgan import DPCTGAN
 from ..models.dp_tvae import DPTVAE
+from ..models.iter_ctgan import IterCTGAN
+from ..models.opacus_ctgan import OpacusCTGAN
 from ..models.tabdiff import eval_tabdiff, train_tabdiff
 from ..utils import get_data_dir, get_sdv_metadata
 
-SynthesizerType = Literal["original", "ctgan", "tvae", "gaussian", "tabdiff", "dp_ctgan", "dp_tvae"]
+SynthesizerType = Literal["original", "ctgan", "tvae", "gaussian", "tabdiff", "dp_ctgan", "dp_tvae", "iter_ctgan", "opacus_ctgan"]
 DATA_DIR = get_data_dir()
 
 
@@ -39,6 +42,7 @@ class SynthesizerConfig(Configuration):
     synthesizer_params: dict | None = None
     dataset: str
     preprocess: str | None = None
+    main_seed: int | None = None
 
     canary_index: int | None = None
     include_canary: bool | None = None
@@ -86,6 +90,10 @@ class IdentitySynthesizer:
         return self._data
 
 def train(config: SynthesizerConfig, overwrite: bool = False):
+    if config.main_seed is not None:
+        np.random.seed(config.main_seed)
+        torch.manual_seed(config.main_seed)
+
     config.cache_path.mkdir(exist_ok=True, parents=True)
     if config.completion_marker.exists() and not overwrite:
         print("{} is already trained. skipping...".format(config.get_unique_name()))
@@ -93,10 +101,6 @@ def train(config: SynthesizerConfig, overwrite: bool = False):
     print("starting training for:", config.get_unique_name())
     proc = config.get_processor().prepare()
 
-    print(proc.get_split("all")[0].shape)
-    print(proc.get_split("train")[0].shape)
-    print(proc.get_split("valid")[0].shape)
-    print(proc.get_split("test")[0].shape)
     X_tr, y_tr = proc.get_split("all" if config.synthesizer == "original" else "train")
     # join them, since most synthesizers don't care about label cols.
     data = X_tr.copy()
@@ -179,11 +183,26 @@ def train(config: SynthesizerConfig, overwrite: bool = False):
         synthesizer.fit_transformer(orig_data, discrete_columns)
         synthesizer.fit(data, discrete_columns=discrete_columns)
         train_logs = synthesizer.loss_values
+    elif config.synthesizer == "iter_ctgan":
+        synthesizer = IterCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "opacus_ctgan":
+        synthesizer = OpacusCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
     elif config.synthesizer == "tabdiff":
         # weare just using tabdiff's internal logic for checkpointing. I'm not
         # going to spend time making it work like sdv, so we will just set the
         # synehtsizer object to None
-        train_tabdiff(proc, train_params=config.train_params, cache_path=config.cache_path)
+        train_tabdiff(
+            proc,
+            train_params=config.train_params,
+            cache_path=config.cache_path,
+            split_override={'train': [data.iloc[:, :-1], data.iloc[:, -1]]},
+        )
 
     if synthesizer is not None:
         joblib.dump(synthesizer, str(config.cache_path / "model.joblib"))
@@ -213,19 +232,27 @@ def generate(
         X_tr, _ = proc.get_split("train")
         n_sample_rows = len(X_tr)
 
-    if synth_config.synthesizer in ["original", "ctgan", "tvae", "gaussian", "dp_ctgan", "dp_tvae"]:
+    if synth_config.synthesizer == "tabdiff":
+        _gen = eval_tabdiff(
+            proc,
+            train_params=synth_config.train_params,
+            n_rows=n_sample_rows,
+        )
+    elif synth_config.synthesizer in ["ctgan", "tvae", "gaussian", "dp_ctgan", "dp_tvae", "iter_ctgan", "opacus_ctgan"]:
         if not (synth_config.cache_path / "model.joblib").exists():
             raise FileNotFoundError(
                 f"Model checkpoint not found at {str(synth_config.cache_path / 'model.joblib')}"
             )
         synthesizer = joblib.load(synth_config.cache_path / "model.joblib")
         _gen = synthesizer.sample(num_rows=n_sample_rows)
-    elif synth_config.synthesizer == "tabdiff":
-        _gen = eval_tabdiff(
-            proc,
-            train_params=synth_config.train_params,
-            n_rows=n_sample_rows,
+    elif (synth_config.cache_path / "model.joblib").exists():
+        synthesizer = joblib.load(synth_config.cache_path / "model.joblib")
+        _gen = synthesizer.sample(num_rows=n_sample_rows)
+    else:
+        raise FileNotFoundError(
+            f"Model checkpoint not found at {str(synth_config.cache_path / 'model.joblib')}"
         )
+
     # just in case!
     if not isinstance(_gen, pd.DataFrame):
         print(f"generated data is not a DataFrame but {type(_gen)}, take a look:")
@@ -242,6 +269,7 @@ def main():
     parser = argparse.ArgumentParser(description="Train a synthesizer and generate data.")
     parser.add_argument("synth_configs", nargs='*', type=str,                   help="Configuration for training the synthesizer.")
     parser.add_argument("-g", "--gen",  type=str,   default=None,   help="Configuration for generating using the trained synthesizer.",)
+    parser.add_argument("-s", "--random-seed",  type=int,   default=None,   help="Seed PRNGs before generating.",)
     parser.add_argument("--train-only",   action="store_true",    help="Only train the synthesizer, do not generate data.")
     parser.add_argument("--overwrite-train",      action="store_true",    help="Whether to overwrite existing results.")
     parser.add_argument("-n", "--name-only", action="store_true", help="Don't train the synthesizer, just print out filenames")
@@ -250,6 +278,8 @@ def main():
 
     for synth_config_file in args.synth_configs:
         synth_config = SynthesizerConfig.from_yaml(synth_config_file)
+        if args.random_seed is not None:
+            synth_config.main_seed = args.random_seed
 
         if args.name_only:
             print(synth_config.cache_path)

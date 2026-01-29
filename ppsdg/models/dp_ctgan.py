@@ -22,16 +22,6 @@ from ppsdg.models.dp_transformer import DPDataTransformer
 
 
 class DPDiscriminator(Discriminator):
-    """
-    Discriminator that adds a sigmoid activation for BCE loss. We need to
-    use BCE loss for DP, because we can't bound the sensitivity of Wasserstein
-    loss. Wasserstein loss is problematic because it can be unboundedly large
-    if the discriminator is too good. This means that the amount of noise we
-    need to add to the gradients to ensure differential privacy can also be
-    unboundedly large. This makes it impossible to provide any meaningful
-    privacy guarantees.
-    """
-
     def forward(self, input_):
         """Apply the Discriminator to the `input_`."""
         assert input_.size()[0] % self.pac == 0
@@ -194,17 +184,16 @@ class DPCTGAN(CTGAN):
                 y_fake = discriminator(fake_cat)
                 y_real = discriminator(real_cat)
 
-                pen = discriminator.calc_gradient_penalty(
-                    real_cat, fake_cat, self._device, self.pac
-                )
                 if self.use_bce_loss:
                     loss_real = F.binary_cross_entropy(y_real, torch.ones_like(y_real))
                     loss_fake = F.binary_cross_entropy(y_fake, torch.zeros_like(y_fake))
                     loss_d = (loss_real + loss_fake) / 2
                 else:
-                    loss_d = -(torch.mean(y_real) - torch.mean(y_fake))
+                    pen = discriminator.calc_gradient_penalty(
+                        real_cat, fake_cat, self._device, self.pac
+                    )
+                    loss_d = torch.mean(y_fake) - torch.mean(y_real) + pen
 
-                pen.backward(retain_graph=True)
                 loss_d.backward()
 
                 per_sample_grads = {}
@@ -258,7 +247,6 @@ class DPCTGAN(CTGAN):
 
                 loss_g.backward()
                 optimizerG.step()
-
 
                 generator_loss = loss_g.detach().cpu().item()
                 discriminator_loss = loss_d.detach().cpu().item()

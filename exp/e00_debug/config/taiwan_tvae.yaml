@@ -1,0 +1,2 @@
+synthesizer: tvae
+dataset: config/dataset/tabarena-taiwanese_bankruptcy_prediction.yaml

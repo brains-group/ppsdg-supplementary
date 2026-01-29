@@ -1,0 +1,4 @@
+dataset: config/dataset/tabarena-taiwanese_bankruptcy_prediction.yaml
+model: xgboost
+train_override_df: /home/kangi/ppsdg-data/train_and_gen/taiwan_tabdiff-d33ccd76/default-44136fa3.csv
+target_metric: balanced_accuracy

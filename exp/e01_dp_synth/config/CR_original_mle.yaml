@@ -1,4 +1,4 @@
-dataset: config/dataset/tabarena-credit-g.yaml
+dataset: /home/zuom/ppsdg/config/dataset/tabarena-credit-g.yaml
 model: xgboost
 target_metric: balanced_accuracy
 model_params: {}

@@ -1,4 +1,4 @@
-dataset: config/dataset/tabarena-Is-this-a-good-customer.yaml
+dataset: /home/zuom/ppsdg/config/dataset/tabarena-Is-this-a-good-customer.yaml
 model: xgboost
 target_metric: balanced_accuracy
 train_override_df: /home/shared/ppsdg-data/train_and_gen/GC_gaussian-f6b44e63/default-44136fa3.csv
@@ -8,3 +8,5 @@ eval_params: {}
 data_params: {}
 metrics:
 - balanced_accuracy
+- accuracy
+- f1

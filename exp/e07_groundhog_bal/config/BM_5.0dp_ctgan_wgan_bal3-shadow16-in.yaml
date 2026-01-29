@@ -1,0 +1,14 @@
+synthesizer: dp_ctgan
+synthesizer_params:
+  epsilon: 5.0
+  delta: 1.0e-05
+  max_grad_norm: 1.0
+  use_bce_loss: false
+dataset: config/dataset/tabarena-bank-marketing.yaml
+downsample_balanced: true
+canary_index: 102
+include_canary: true
+reference_size: 5289
+reference_seed: 12
+sample_size: 2115
+sample_seed: 36

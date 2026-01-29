@@ -1,6 +1,7 @@
 """Shared configuration for experiments."""
 
 datasets = {
+    "AD": "config/dataset/adult.yaml",
     "BM": "config/dataset/tabarena-bank-marketing.yaml",
     "BC": "config/dataset/tabarena-Bank_Customer_Churn.yaml",
     "CC": "config/dataset/tabarena-credit_card_clients_default.yaml",
@@ -14,6 +15,7 @@ datasets = {
 }
 
 pretty_dset_names = {
+    "AD": "Adult",
     "BM": "Bank Marketing",
     "BC": "Bank Customer Churn",
     "CC": "Credit Card Default",

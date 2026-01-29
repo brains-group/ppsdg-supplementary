@@ -1,0 +1,9 @@
+synthesizer: ctgan
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+downsample_balanced: true
+canary_index: 102
+include_canary: false
+reference_size: 10026
+reference_seed: 11
+sample_size: 4010
+sample_seed: 20
