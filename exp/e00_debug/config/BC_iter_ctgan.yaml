@@ -1,0 +1,2 @@
+synthesizer: iter_ctgan
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml

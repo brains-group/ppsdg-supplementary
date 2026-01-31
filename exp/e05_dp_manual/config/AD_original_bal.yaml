@@ -1,0 +1,3 @@
+synthesizer: original
+dataset: config/dataset/adult.yaml
+downsample_balanced: true

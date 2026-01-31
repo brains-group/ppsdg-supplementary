@@ -1,0 +1,11 @@
+dataset: /home/zuom/ppsdg/config/dataset/phishing.yaml
+model: xgboost
+target_metric: balanced_accuracy
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy
+- accuracy
+- f1

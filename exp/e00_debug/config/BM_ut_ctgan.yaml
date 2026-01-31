@@ -1,0 +1,2 @@
+synthesizer: ut_ctgan
+dataset: config/dataset/tabarena-bank-marketing.yaml

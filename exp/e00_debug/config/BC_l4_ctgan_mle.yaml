@@ -1,0 +1,12 @@
+dataset: /home/zuom/ppsdg/config/dataset/tabarena-Bank_Customer_Churn.yaml
+model: xgboost
+target_metric: balanced_accuracy
+train_override_df: /home/shared/ppsdg-data/train_and_gen/BC_l4_ctgan-e0745b55/default-44136fa3.csv
+model_params: {}
+train_params: {}
+eval_params: {}
+data_params: {}
+metrics:
+- balanced_accuracy
+- accuracy
+- f1

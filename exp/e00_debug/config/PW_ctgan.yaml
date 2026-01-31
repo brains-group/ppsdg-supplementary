@@ -1,0 +1,2 @@
+synthesizer: ctgan
+dataset: config/dataset/phishing.yaml

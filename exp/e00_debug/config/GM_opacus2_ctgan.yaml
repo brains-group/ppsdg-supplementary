@@ -1,0 +1,2 @@
+synthesizer: opacus2_ctgan
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml

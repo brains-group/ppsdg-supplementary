@@ -1,2 +1,4 @@
 synthesizer: tabdiff
 dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+train_params:
+  steps: 300

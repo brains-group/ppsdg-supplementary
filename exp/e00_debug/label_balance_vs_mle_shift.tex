@@ -1,0 +1,14 @@
+\begin{tinytable}
+\centering
+\caption{Label balance shift vs. MLE shift per dataset.}
+\label{tab:label_balance_vs_mle_shift}
+\begin{tabular}{lllllllll}
+\toprule
+Dataset & \multicolumn{2}{c}{ctgan} & \multicolumn{2}{c}{gaussian} & \multicolumn{2}{c}{tabdiff} & \multicolumn{2}{c}{tvae} \\
+ & Label Shift & MLE Shift & Label Shift & MLE Shift & Label Shift & MLE Shift & Label Shift & MLE Shift \\
+\midrule
+AD & 23.93\% $\rightarrow$ 26.56\% (10.99\%) & 81.49\% $\rightarrow$ 76.22\% (-6.47\%) & 23.93\% $\rightarrow$ 24.15\% (0.93\%) & 81.49\% $\rightarrow$ 51.34\% (-37.00\%) & 23.93\% $\rightarrow$ 23.75\% (-0.73\%) & 81.49\% $\rightarrow$ 79.92\% (-1.93\%) & 23.93\% $\rightarrow$ 23.95\% (0.10\%) & 81.49\% $\rightarrow$ 79.05\% (-3.00\%) \\
+CR & 30.07\% $\rightarrow$ 17.06\% (-43.26\%) & 67.38\% $\rightarrow$ 49.50\% (-26.53\%) & 30.07\% $\rightarrow$ 30.24\% (0.56\%) & 67.38\% $\rightarrow$ 55.81\% (-17.18\%) & 30.07\% $\rightarrow$ 27.70\% (-7.87\%) & 67.38\% $\rightarrow$ 61.31\% (-9.02\%) & 30.07\% $\rightarrow$ 14.19\% (-52.81\%) & 67.38\% $\rightarrow$ 52.30\% (-22.39\%) \\
+\bottomrule
+\end{tabular}
+\end{tinytable}

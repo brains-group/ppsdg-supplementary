@@ -1,0 +1,25 @@
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow10-out-2fea5fc7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow11-out-f0c033ee/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow12-out-2bfea6cf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow13-out-6329f49d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow14-out-868eca9f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow15-out-1e746e9f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow16-out-6c2389ff/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow17-out-5cb59598/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow18-out-e791cbc5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow19-out-650b5b1f/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow10-in-2c73e999/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow11-in-72d388a4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow12-in-ea67efdf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow13-in-e939d3f2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow14-in-a30b6269/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow15-in-7426e0a9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow16-in-77aa7596/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow17-in-6b33c6cf/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow18-in-68c4b643/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow19-in-1d621cda/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow0-out-57a6494e/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_iter_10dp_tvae-shadow0-in-8cc794ff/default-44136fa3.csv

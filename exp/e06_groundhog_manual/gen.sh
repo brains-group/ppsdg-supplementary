@@ -1,4 +1,4 @@
-for d in BC:10000 BM:45211 CC:30000 CR:1000 GM:150000; do
+for d in AD:48842 BC:10000 BM:45211 CC:30000 CR:1000 GM:150000; do
 	n=${d#*:}
 	for file in ${d%:*}_*; do
 		for j in 0 {10..19}; do

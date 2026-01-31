@@ -1,0 +1,4 @@
+synthesizer: iter_tvae
+dataset: config/dataset/adult.yaml
+synthesizer_params:
+  epsilon: 10.0

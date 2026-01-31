@@ -1,0 +1,2 @@
+synthesizer: opacus_ctgan
+dataset: config/dataset/tabarena-Is-this-a-good-customer.yaml

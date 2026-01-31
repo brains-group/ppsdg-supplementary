@@ -1,0 +1,4 @@
+synthesizer: iter_tvae
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+synthesizer_params:
+  epsilon: 1.0

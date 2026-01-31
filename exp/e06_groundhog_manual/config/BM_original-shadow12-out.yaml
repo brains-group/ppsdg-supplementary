@@ -1,8 +1,0 @@
-synthesizer: original
-dataset: config/dataset/tabarena-bank-marketing.yaml
-canary_index: 100
-include_canary: false
-reference_size: 22605
-reference_seed: 2
-sample_size: 9042
-sample_seed: 22

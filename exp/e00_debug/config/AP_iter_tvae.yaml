@@ -1,0 +1,2 @@
+synthesizer: iter_tvae
+dataset: config/dataset/tabarena-kddcup09_appetency.yaml

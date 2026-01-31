@@ -1,0 +1,4 @@
+synthesizer: iter_tvae
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+synthesizer_params:
+  epsilon: 1.0

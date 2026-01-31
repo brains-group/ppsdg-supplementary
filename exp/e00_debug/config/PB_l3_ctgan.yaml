@@ -1,0 +1,2 @@
+synthesizer: l3_ctgan
+dataset: config/dataset/tabarena-polish_companies_bankruptcy.yaml

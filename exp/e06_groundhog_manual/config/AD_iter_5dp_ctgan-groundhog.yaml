@@ -1,0 +1,25 @@
+dataset: config/dataset/adult.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow10-out-8d06ca3b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow11-out-5ef85172/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow12-out-9a8de668/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow13-out-dc94951b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow14-out-e831bb01/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow15-out-e2d9309c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow16-out-2727a9e5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow17-out-6df4c8d5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow18-out-363493c6/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow19-out-ffbb6dce/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow10-in-2d4ebe3f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow11-in-0ebe528c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow12-in-f8b0eae3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow13-in-83655b83/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow14-in-fc918e6f/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow15-in-6db6c6ac/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow16-in-1085f792/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow17-in-bd850123/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow18-in-e4f6cc36/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow19-in-81cf2b92/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow0-out-fc667340/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_5dp_ctgan-shadow0-in-064b9031/default-44136fa3.csv

@@ -1,4 +1,4 @@
-dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+dataset: config/dataset/adult.yaml
 model: xgboost
 target_metric: balanced_accuracy
 model_params: {}

@@ -1,0 +1,10 @@
+synthesizer: iter_dp_ctgan
+dataset: config/dataset/adult.yaml
+synthesizer_params:
+  epsilon: 0.0
+canary_index: 100
+include_canary: false
+reference_size: 24421
+reference_seed: 2
+sample_size: 9768
+sample_seed: 23

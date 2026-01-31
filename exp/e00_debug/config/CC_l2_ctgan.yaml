@@ -1,0 +1,2 @@
+synthesizer: l2_ctgan
+dataset: config/dataset/tabarena-credit_card_clients_default.yaml

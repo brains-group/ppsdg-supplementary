@@ -1,0 +1,10 @@
+synthesizer: iter_tvae
+dataset: config/dataset/tabarena-bank-marketing.yaml
+synthesizer_params:
+  epsilon: 1.0
+canary_index: 100
+include_canary: false
+reference_size: 22605
+reference_seed: 2
+sample_size: 9042
+sample_seed: 24

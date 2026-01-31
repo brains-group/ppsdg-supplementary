@@ -1,25 +1,25 @@
 dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
 train_models:
-- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow10-out-34eb604a/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow11-out-4bc1a1aa/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow12-out-dfcf11a5/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow13-out-7f54b109/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow14-out-a7094dbe/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow15-out-4fa8e194/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow16-out-d5b9e885/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow17-out-9d154743/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow18-out-9450c69b/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow19-out-286eea4c/default-44136fa3.csv
-- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow10-in-23e361d1/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow11-in-493cce5c/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow12-in-ca80b89a/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow13-in-ce022c9e/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow14-in-3dc5bdaf/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow15-in-21bb2b3a/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow16-in-20f450e7/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow17-in-baf05539/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow18-in-4a08aa4a/default-44136fa3.csv
-  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow19-in-e1971d8a/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow10-out-3c259426/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow11-out-6953e4f5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow12-out-d74fe7f9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow13-out-9b059b61/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow14-out-fe0c4cc1/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow15-out-d7e14357/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow16-out-a1cfc4e4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow17-out-0a5bb543/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow18-out-3fb3c9a0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow19-out-94e47d8d/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow10-in-b4eccb84/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow11-in-ee547648/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow12-in-76e53e6e/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow13-in-2e1594c2/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow14-in-7e894a8b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow15-in-1bb4e315/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow16-in-fa14f573/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow17-in-f1d8e298/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow18-in-73bcf458/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow19-in-863e5b43/default-44136fa3.csv
 test_models:
-- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow0-out-f54b9aa7/default-44136fa3.csv
-- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow0-in-aae780e9/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow0-out-d97ecafc/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/GM_tabdiff-shadow0-in-36b67727/default-44136fa3.csv

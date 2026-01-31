@@ -1,0 +1,4 @@
+synthesizer: tabdiff
+dataset: config/dataset/adult.yaml
+train_params:
+  steps: 300

@@ -1,0 +1,2 @@
+synthesizer: l1_ctgan
+dataset: config/dataset/tabarena-taiwanese_bankruptcy_prediction.yaml

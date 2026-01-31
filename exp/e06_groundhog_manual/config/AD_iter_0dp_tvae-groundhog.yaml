@@ -1,0 +1,25 @@
+dataset: config/dataset/adult.yaml
+train_models:
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow10-out-5622bbc0/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow11-out-a8488118/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow12-out-371a2b97/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow13-out-4afaaad3/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow14-out-a7aecbb5/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow15-out-e4ec8d45/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow16-out-ff9b156d/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow17-out-7a99bc69/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow18-out-8a28d642/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow19-out-ff573fc2/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow10-in-ac7ad4f4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow11-in-5d80a3cb/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow12-in-c5f83cf7/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow13-in-dc743c65/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow14-in-045685d9/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow15-in-d9d24e7c/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow16-in-013c44ab/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow17-in-5e105dc4/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow18-in-9922390b/default-44136fa3.csv
+  - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow19-in-f262bf74/default-44136fa3.csv
+test_models:
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow0-out-6e0ce11a/default-44136fa3.csv
+- - /home/shared/ppsdg-data/train_and_gen/AD_iter_0dp_tvae-shadow0-in-0c5111db/default-44136fa3.csv

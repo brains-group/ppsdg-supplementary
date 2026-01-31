@@ -1,8 +1,10 @@
 synthesizer: tabdiff
 dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+train_params:
+  steps: 300
 canary_index: 100
 include_canary: false
 reference_size: 5000
-reference_seed: 2
-sample_size: 1000
-sample_seed: 0
+reference_seed: 1
+sample_size: 2000
+sample_seed: 10

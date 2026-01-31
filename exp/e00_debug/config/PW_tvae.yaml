@@ -1,0 +1,2 @@
+synthesizer: tvae
+dataset: config/dataset/phishing.yaml

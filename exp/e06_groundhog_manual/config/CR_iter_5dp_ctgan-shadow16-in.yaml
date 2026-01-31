@@ -1,0 +1,10 @@
+synthesizer: iter_dp_ctgan
+dataset: config/dataset/tabarena-credit-g.yaml
+synthesizer_params:
+  epsilon: 5.0
+canary_index: 100
+include_canary: true
+reference_size: 500
+reference_seed: 2
+sample_size: 200
+sample_seed: 26

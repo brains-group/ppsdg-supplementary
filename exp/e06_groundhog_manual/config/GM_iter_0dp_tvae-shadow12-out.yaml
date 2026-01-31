@@ -1,0 +1,10 @@
+synthesizer: iter_tvae
+dataset: config/dataset/tabarena-GiveMeSomeCredit.yaml
+synthesizer_params:
+  epsilon: 0
+canary_index: 100
+include_canary: false
+reference_size: 75000
+reference_seed: 2
+sample_size: 30000
+sample_seed: 22

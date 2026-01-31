@@ -1,0 +1,4 @@
+synthesizer: iter_dp_ctgan
+dataset: config/dataset/tabarena-Bank_Customer_Churn.yaml
+synthesizer_params:
+  epsilon: 0.0
