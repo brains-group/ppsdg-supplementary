@@ -21,12 +21,22 @@ from tabkit.utils import Configuration
 
 from ..models.dp_ctgan import DPCTGAN
 from ..models.dp_tvae import DPTVAE
+from ..models.iter_tvae import IterTVAE
+from ..models.l0_ctgan import L0CTGAN
+from ..models.l1_ctgan import L1CTGAN
+from ..models.l2_ctgan import L2CTGAN
+from ..models.l3_ctgan import L3CTGAN
+from ..models.l4_ctgan import L4CTGAN
+from ..models.nc_ctgan import NCNoDPCTGAN
+from ..models.clip_ctgan import ClipCTGAN
 from ..models.iter_ctgan import IterCTGAN
-from ..models.opacus_ctgan import OpacusCTGAN
+from ..models.iter_dp_ctgan import IterDPCTGAN
+from ..models.batch_ctgan import BatchCTGAN
+from ..models.ut_ctgan import UniformTransformerCTGAN
 from ..models.tabdiff import eval_tabdiff, train_tabdiff
 from ..utils import get_data_dir, get_sdv_metadata
 
-SynthesizerType = Literal["original", "ctgan", "tvae", "gaussian", "tabdiff", "dp_ctgan", "dp_tvae", "iter_ctgan", "opacus_ctgan"]
+SynthesizerType = Literal["original", "ctgan", "tvae", "gaussian", "tabdiff", "dp_ctgan", "dp_tvae", "l0_ctgan", "l1_ctgan", "l2_ctgan", "l3_ctgan", "l4_ctgan", "nc_ctgan", "clip_ctgan", "iter_ctgan", "batch_ctgan", "ut_ctgan", "iter_dp_ctgan", "iter_tvae"]
 DATA_DIR = get_data_dir()
 
 
@@ -96,6 +106,7 @@ def train(config: SynthesizerConfig, overwrite: bool = False):
 
     config.cache_path.mkdir(exist_ok=True, parents=True)
     if config.completion_marker.exists() and not overwrite:
+        print(config)
         print("{} is already trained. skipping...".format(config.get_unique_name()))
         return
     print("starting training for:", config.get_unique_name())
@@ -140,6 +151,7 @@ def train(config: SynthesizerConfig, overwrite: bool = False):
 
     metadata = get_sdv_metadata(proc)
     discrete_columns = detect_discrete_columns(metadata, orig_data, {})
+    print(f"{discrete_columns=}")
     synthesizer = None
     train_logs = None
     if config.synthesizer == "original":
@@ -183,13 +195,63 @@ def train(config: SynthesizerConfig, overwrite: bool = False):
         synthesizer.fit_transformer(orig_data, discrete_columns)
         synthesizer.fit(data, discrete_columns=discrete_columns)
         train_logs = synthesizer.loss_values
+    elif config.synthesizer == "l0_ctgan":
+        synthesizer = L0CTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data[0::2], discrete_columns)
+        synthesizer.fit(data[1::2], discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "l1_ctgan":
+        synthesizer = L1CTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(orig_data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "l2_ctgan":
+        synthesizer = L2CTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(orig_data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "l3_ctgan":
+        synthesizer = L3CTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(orig_data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "l4_ctgan":
+        synthesizer = L4CTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data[0::2], discrete_columns)
+        synthesizer.fit(data[1::2], discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "nc_ctgan":
+        synthesizer = NCNoDPCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(orig_data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "clip_ctgan":
+        synthesizer = ClipCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
     elif config.synthesizer == "iter_ctgan":
         synthesizer = IterCTGAN(**(config.synthesizer_params or {}), verbose=True)
         synthesizer.fit_transformer(data, discrete_columns)
         synthesizer.fit(data, discrete_columns=discrete_columns)
         train_logs = synthesizer.loss_values
-    elif config.synthesizer == "opacus_ctgan":
-        synthesizer = OpacusCTGAN(**(config.synthesizer_params or {}), verbose=True)
+    elif config.synthesizer == "iter_dp_ctgan":
+        synthesizer = IterDPCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "batch_ctgan":
+        synthesizer = BatchCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "ut_ctgan":
+        synthesizer = UniformTransformerCTGAN(**(config.synthesizer_params or {}), verbose=True)
+        synthesizer.fit_transformer(data, discrete_columns)
+        synthesizer.fit(data, discrete_columns=discrete_columns)
+        train_logs = synthesizer.loss_values
+    elif config.synthesizer == "iter_tvae":
+        synthesizer = IterTVAE(**(config.synthesizer_params or {}), verbose=True)
         synthesizer.fit_transformer(data, discrete_columns)
         synthesizer.fit(data, discrete_columns=discrete_columns)
         train_logs = synthesizer.loss_values
@@ -238,7 +300,7 @@ def generate(
             train_params=synth_config.train_params,
             n_rows=n_sample_rows,
         )
-    elif synth_config.synthesizer in ["ctgan", "tvae", "gaussian", "dp_ctgan", "dp_tvae", "iter_ctgan", "opacus_ctgan"]:
+    elif synth_config.synthesizer in ["ctgan", "tvae", "gaussian", "dp_ctgan", "dp_tvae", "l0_ctgan", "l1_ctgan", "l2_ctgan", "l3_ctgan", "l4_ctgan", "nc_ctgan", "clip_ctgan", "iter_ctgan", "iter_dp_ctgan", "batch_ctgan", "ut_ctgan", "iter_tvae"]:
         if not (synth_config.cache_path / "model.joblib").exists():
             raise FileNotFoundError(
                 f"Model checkpoint not found at {str(synth_config.cache_path / 'model.joblib')}"

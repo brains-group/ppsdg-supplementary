@@ -3,71 +3,42 @@ import warnings
 import numpy as np
 import pandas as pd
 import torch
+import torch.nn.functional as F
 from tqdm import tqdm
 from ctgan.data_sampler import DataSampler
 from ctgan.data_transformer import DataTransformer
 from ctgan.synthesizers.base import random_state
 from ctgan.synthesizers.ctgan import CTGAN, Discriminator, Generator
+from opacus import PrivacyEngine
 from torch.utils.data import DataLoader, TensorDataset
-import opacus
-
 from ppsdg.models.dp_transformer import DPDataTransformer
 
-class IterDPCTGAN(CTGAN):
+class Opacus2CTGAN(CTGAN):
     def __init__(
         self,
-        log_frequency=False,
-        epsilon=0.0,
+        epsilon=None,
         delta=1e-5,
         max_grad_norm=1.0,
-        use_gradient_penalty=True,
-        gp_lambda=10,
         **kwargs
     ):
         """Create a DP-CTGAN synthesizer."""
-        super().__init__(
-            pac=1,
-            log_frequency=log_frequency,
-            **kwargs
-        )
+        super().__init__(log_frequency=True, pac=1, **kwargs)
+        self.max_grad_norm = max_grad_norm
         self.epsilon = epsilon
         self.delta = delta
-        self.max_grad_norm = max_grad_norm
-        self.gp_lambda = gp_lambda
 
     @random_state
     def fit_transformer(self, data, discrete_columns):
         self._validate_discrete_columns(data, discrete_columns)
         self._validate_null_data(data, discrete_columns)
 
-        self._transformer = DPDataTransformer()
+        self._transformer = DataTransformer()
         self._transformer.fit(data, discrete_columns)
-
-        transformed_data = self._transformer.transform(data)
-        self._data_sampler = DataSampler(
-            transformed_data, self._transformer.output_info_list, self._log_frequency
-        )
 
     @random_state
     def sample(self, num_rows):
         """Sample data similar to the training data."""
         return super().sample(n=num_rows)
-
-    @random_state
-    def condvec_from_real (self, real_data):
-        batch = len(real_data)
-
-        discrete_column_id = np.random.choice(self._data_sampler._n_discrete_columns, batch)
-        mask = np.zeros((batch, self._data_sampler._n_discrete_columns), dtype='float32')
-        mask[np.arange(batch), discrete_column_id] = 1
-
-        category_id_in_col = real_data[np.arange(batch), discrete_column_id].astype("int")
-        category_id = self._data_sampler._discrete_column_cond_st[discrete_column_id] + category_id_in_col
-
-        cond = np.zeros((batch, self._data_sampler._n_categories), dtype='float32')
-        cond[np.arange(batch), category_id] = 1
-
-        return cond, mask, discrete_column_id, category_id_in_col
 
     @random_state
     def fit(self, train_data, discrete_columns=()):
@@ -86,10 +57,13 @@ class IterDPCTGAN(CTGAN):
         train_data = self._transformer.transform(train_data)
         data_loader = DataLoader(
             TensorDataset(torch.from_numpy(train_data.astype("float32"))),
-            batch_size=self._batch_size, shuffle=True, drop_last=False,
+            batch_size=self._batch_size, shuffle=True, drop_last=True,
             generator=loader_gen
         )
-        data_loader = opacus.data_loader.DPDataLoader.from_data_loader(data_loader)
+
+        self._data_sampler = DataSampler(
+            train_data, self._transformer.output_info_list, self._log_frequency
+        )
 
         data_dim = self._transformer.output_dimensions
 
@@ -115,15 +89,27 @@ class IterDPCTGAN(CTGAN):
             weight_decay=self._discriminator_decay,
         )
 
-        noise_multiplier = 0.0
-        if self.epsilon > 0:
-            noise_multiplier = opacus.accountants.utils.get_noise_multiplier(
-                target_epsilon=self.epsilon,
-                target_delta=self.delta,
-                sample_rate=1/len(data_loader),
-                epochs=self._epochs,
-            )
-            print(f"{noise_multiplier=}")
+        #_discriminator = discriminator
+
+        privacy_engine = PrivacyEngine()
+        privacy_args = {
+            'module': discriminator,
+            'optimizer': optimizerD,
+            'data_loader': data_loader,
+            'max_grad_norm': self.max_grad_norm,
+            'poisson_sampling': False, # XXX
+        }
+        if self.epsilon:
+            privacy_args['target_epsilon'] = self.epsilon
+            privacy_args['target_delta'] = self.delta
+            privacy_args['epochs'] = self._epochs
+            discriminator, optimizerD, data_loader = privacy_engine.make_private_with_epsilon(**privacy_args)
+        else:
+            privacy_args['noise_multiplier'] = 0
+            discriminator, optimizerD, data_loader = privacy_engine.make_private(**privacy_args)
+
+        mean = torch.zeros(self._batch_size, self._embedding_dim, device=self._device)
+        std = mean + 1
 
         self.loss_values = pd.DataFrame(columns=['Epoch', 'Generator Loss', 'Discriminator Loss'])
 
@@ -135,69 +121,39 @@ class IterDPCTGAN(CTGAN):
         for i in epoch_iterator:
             for batch_data in data_loader:
                 batch_size = batch_data[0].shape[0]
-                real_data = batch_data[0].to(self._device)
 
                 # Discriminator
-                c1, m1, col, opt = self.condvec_from_real(real_data.cpu().numpy())
+                c1, _, _, _ = self._data_sampler.sample_condvec(batch_size)
                 c1 = torch.from_numpy(c1).to(self._device)
-                real_cat = torch.cat([real_data, c1], dim=1)
 
-                mean = torch.zeros(batch_size, self._embedding_dim, device=self._device)
-                fakez = torch.normal(mean=mean, std=mean+1, generator=noise_gen)
+                fakez = torch.normal(mean=mean, std=std, generator=noise_gen)
                 fakez = torch.cat([fakez, c1], dim=1)
                 fake = self._generator(fakez)
                 fakeact = self._apply_activate(fake)
                 fake_cat = torch.cat([fakeact, c1], dim=1)
 
+                real_data = batch_data[0].to(self._device)
+                real_cat = torch.cat([real_data, c1], dim=1)
+
+                optimizerD.zero_grad(set_to_none=False)
                 y_fake = discriminator(fake_cat)
                 y_real = discriminator(real_cat)
-
-                alpha = torch.rand(real_cat.size(0), 1, device=self._device)
-                alpha = alpha.repeat(1, real_cat.size(1))
-                interpolates = alpha * real_cat + ((1 - alpha) * fake_cat)
-                disc_interpolates = discriminator(interpolates)
-                interpolate_gradients, = torch.autograd.grad(
-                    outputs=disc_interpolates,
-                    inputs=interpolates,
-                    grad_outputs=torch.ones(disc_interpolates.size(), device=self._device),
-                    create_graph=True,
-                    retain_graph=True,
-                    only_inputs=True,
-                )
-                grad_penalties = (interpolate_gradients.norm(2, dim=1) - 1) ** 2 * self.gp_lambda
-
-                accum_grads = [torch.zeros_like(p) for p in discriminator.parameters()]
-
-                for j in range(batch_size):
-                    optimizerD.zero_grad(set_to_none=False)
-                    loss_tmp = y_fake[j] - y_real[j] + grad_penalties[j]
-                    loss_tmp.backward(retain_graph=True)
-                    torch.nn.utils.clip_grad_norm_(discriminator.parameters(), self.max_grad_norm)
-                    for k, p in enumerate(discriminator.parameters()):
-                        accum_grads[k] += p.grad
-
-                for j, p in enumerate(discriminator.parameters()):
-                    noise = torch.normal(
-                        0,
-                        noise_multiplier * self.max_grad_norm,
-                        size=p.grad.shape,
-                        device=self._device,
-                    )
-                    p.grad = (accum_grads[j] + noise) / batch_size
+                loss_fake = torch.mean(y_fake)
+                loss_real = -torch.mean(y_real)
+                #pen = _discriminator.calc_gradient_penalty(real_cat, fake_cat, self._device, self.pac)
+                loss_d = (loss_fake + loss_real) / 2
+                loss_d.backward()
 
                 optimizerD.step()
-
-                loss_d = (y_fake.mean() - y_real.mean()) / 2 + grad_penalties.mean()
                 total_norm = torch.cat([p.grad.flatten() for p in discriminator.parameters()]).norm(2).item()
-                #print(i, loss_d.item(), total_norm)
+                #print(i, loss_fake.item(), loss_real.item(), total_norm)
 
                 # Generator
+                fakez = torch.normal(mean=mean, std=std, generator=noise_gen)
                 c1, m1, col, opt = self._data_sampler.sample_condvec(self._batch_size)
+
                 c1 = torch.from_numpy(c1).to(self._device)
                 m1 = torch.from_numpy(m1).to(self._device)
-
-                mean = torch.zeros(self._batch_size, self._embedding_dim, device=self._device)
-                fakez = torch.normal(mean=mean, std=mean+1, generator=noise_gen)
                 fakez = torch.cat([fakez, c1], dim=1)
                 fake = self._generator(fakez)
                 fakeact = self._apply_activate(fake)

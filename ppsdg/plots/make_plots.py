@@ -168,10 +168,10 @@ plt.close(fig)
 # Plot 2: Private methods with subplots for each epsilon
 
 df_private = df_plt[df_plt["Eps"] != -1]
-eps_values = sorted(df_private["Eps"].unique())
+eps_values = [0, 10, 5, 1]
 
 fig, axes = plt.subplots(
-    1, len(eps_values), figsize=(2.5 * len(eps_values), 2.5), sharey=True
+    1, 1, figsize=(3, 3), sharey=True
 )
 
 if len(eps_values) == 1:
@@ -181,7 +181,7 @@ if len(eps_values) == 1:
 all_legend_handles = {}
 
 for idx, eps in enumerate(eps_values):
-    ax = axes[idx]
+    ax = axes
     df_eps = df_private[df_private["Eps"] == eps]
     df_eps_agg = (
         df_eps.groupby("Model")
@@ -198,6 +198,8 @@ for idx, eps in enumerate(eps_values):
     )
 
     for model in df_eps_agg["Model"]:
+        if model != "DP-CTGAN":
+            continue
         data = df_eps_agg[df_eps_agg["Model"] == model]
         line = ax.errorbar(
             data["P-Mean"],
@@ -209,6 +211,7 @@ for idx, eps in enumerate(eps_values):
             capsize=2,
             capthick=1,
             elinewidth=1,
+            label=f"ε={'∞' if eps == 0 else eps}",
         )
         # Store legend handle for this model (only once)
         if model not in all_legend_handles:
@@ -222,13 +225,15 @@ for idx, eps in enumerate(eps_values):
                 label=model,
             )
 
-    ax.set_xlabel("Min. Class Balance Shift", fontsize=9)
+    ax.set_xlabel("Minority Class Balance Shift", fontsize=9)
+    ax.legend(handlelength=1)
     if idx == 0:
-        ax.set_ylabel("Balanced Accuracy (BACC)", fontsize=9)
-    ax.set_title(f"ε = {eps}", fontsize=10)
+        ax.set_ylabel("Balanced Accuracy", fontsize=9)
+    ax.set_title(f"DP-CTGAN over all datasets", fontsize=10)
     ax.grid(True, alpha=0.3)
     ax.tick_params(labelsize=8)
 
+"""
 # Add single shared legend
 fig.legend(
     handles=list(all_legend_handles.values()),
@@ -240,6 +245,7 @@ fig.legend(
     handletextpad=0.5,
     columnspacing=1,
 )
+"""
 
 fig.tight_layout()
 fig.savefig(plots_dir / "bacc_vs_p_private.pdf", bbox_inches="tight")

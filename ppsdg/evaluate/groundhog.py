@@ -47,18 +47,30 @@ class GroundhogAuditConfig (Configuration):
     test_size: int = 100
 
     def __post_init__ (self):
+        available_paths = [[], []]
         for models in self.train_models, self.test_models:
-            for paths in models:
+            for i in range(len(models)):
+                paths = models[i]
                 for j in range(len(paths)):
                     paths[j] = str(Path(paths[j]).resolve())
+
+                    import glob
+                    pattern = paths[j][:-29] + "*" + paths[j][-21:]
+                    available_paths[i] += glob.glob(pattern)
 
                     # Early exit
                     try:
                         with open(paths[j], "rb") as _:
-                            pass
+                            available_paths[i].append(paths[j])
                     except FileNotFoundError:
                         import sys
-                        sys.exit(1)
+                        print(paths[j], "not found")
+
+        # XXX
+        #self.train_models = [available_paths[0][:-1] + available_paths[1][:-1], available_paths[1][:-1] + available_paths[0][:-1]]
+        #self.test_models = [available_paths[1][-1:] + available_paths[0][-1:], available_paths[0][-1:] + available_paths[1][-1:]]
+        self.train_models = [available_paths[0][:-1], available_paths[1][:-1]]
+        self.test_models = [available_paths[0][-1:], available_paths[1][-1:]]
 
     @property
     def save_dir(self) -> Path:

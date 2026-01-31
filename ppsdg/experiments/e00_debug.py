@@ -33,8 +33,8 @@ mle_target = global_config.mle_target
 mle_metric = global_config.mle_metric
 privacy_metrics = global_config.privacy_metrics
 
-synthesizers = ["gaussian", "ctgan", "tvae", "tabdiff"]
-pretty_synth_names = ["Gaussian", "CTGAN", "TVAE", "TabDiff"]
+synthesizers = ["gaussian", "ctgan", "tvae", "tabdiff", "l0_ctgan", "l1_ctgan", "l2_ctgan", "l3_ctgan", "batch_ctgan", "ut_ctgan", "iter_ctgan", "iter_dp_ctgan", "iter_tvae"]
+pretty_synth_names = ["Gaussian", "CTGAN", "TVAE", "TabDiff", "L0-CTGAN", "L1-CTGAN", "L2-CTGAN", "L3-CTGAN", "Opacus-CTGAN", "Opacus2-CTGAN", "Iter-CTGAN", "iter_dp_ctgan", "iter_tvae"]
 snames = dict(zip(synthesizers, pretty_synth_names))
 
 incomplete_runs = []
