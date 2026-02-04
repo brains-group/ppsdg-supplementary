@@ -11,6 +11,12 @@ Both the model implementations as well as the evaluation configuration/scripts a
 conda create -n ppsdg python=3.10 -y
 ```
 
+If using pixi, you can do:
+
+```bash
+pixi install
+```
+
 2. Install the project as a package:
 
 ```bash
@@ -34,12 +40,6 @@ Note: When debugging, make sure to include `import ppsdg` at the top level so
 that the environment variables are loaded correctly.
 
 ## Datasets
-
-For the configurations to work correctly, the dataset files should be placed in
-`/home/shared/ppsdg-raw-data` directory. Or, the configurations can be modified
-to point to the correct dataset paths. Keep in mind that changing the
-configuration will change the hash of that particular configuration (for
-reproducibility purposes).
 
 The datasets can be loaded using [tabkit](https://github.com/inwonakng/tabkit)
 package, which will take care of basic column type inference and preprocessing
