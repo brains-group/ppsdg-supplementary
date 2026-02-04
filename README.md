@@ -1,4 +1,7 @@
-# Privacy Preserving Synthetic Data Generation (PPSDG)
+# Measuring Privacy Risks and Tradeoffs in Financial Synthetic Data Generation
+
+This is the official codebase for the paper titled "Measuring Privacy Risks and Tradeoffs in Financial Synthetic Data Generation".
+Both the model implementations as well as the evaluation configuration/scripts are included in this repository.
 
 ## Getting Started
 
@@ -52,11 +55,9 @@ processor = TableProcessor(
 
 ```
 
-## Running the scripts
-
-Examples of basic components can be found under `ppsdg/examples/`.
-
 ### Training synthesizer/generating data
 
-This is handled by `ppsdg.evaluate.train_and_generate` script. If this repository is installed as a package, the `train-gen` command is available.
-It takes two configurations, one for the synthesizer and one for actually generating the synthetic data.
+This is handled by `ppsdg.evaluate.train_and_generate` script. If this
+repository is installed as a package, the `train-gen` command is available. It
+takes two configurations, one for the synthesizer and one for actually
+generating the synthetic data.

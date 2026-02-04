@@ -1,0 +1,4 @@
+dataset_name: lendingclub
+data_source: disk
+filepath: /home/shared/ppsdg-raw-data/fartrans.csv
+filetype: csv

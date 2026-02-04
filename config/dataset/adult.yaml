@@ -1,0 +1,3 @@
+dataset_name: adult
+data_source: openml
+openml_dataset_id: 1590

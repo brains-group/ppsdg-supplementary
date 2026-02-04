@@ -1,0 +1,4 @@
+dataset_name: swift
+data_source: disk
+filepath: /home/shared/ppsdg-raw-data/swift.csv
+filetype: csv
